@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
+
+*{
+  margin: 0;
+  font-family: 'Cormorant';
+}
+
+ body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #533483 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+    .moon {
+    position: absolute;
+    top: 8%;
+    right: 1%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, #fff 0%, #f0f0f0 40%, #dcdcdc 70%, #cfcfcf 100%);
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.2),
+        0 0 60px rgba(255, 255, 255, 0.1);
+    animation: moonGlow 4s ease-in-out infinite alternate;
+    overflow: hidden;
+}
+
+/* Dark overlay to create waxing crescent shadow */
+.moon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #0f3460 60%, #16213e 100%);
+    border-radius: 50%;
+}
+
+/* Subtle crater highlight */
+.moon::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    width: 10px;
+    height: 10px;
+    background: rgba(200, 200, 200, 0.6);
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .moon {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
